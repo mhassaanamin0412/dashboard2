@@ -215,7 +215,12 @@ export default function EditLeadModal() {
                 <Tag className="h-3.5 w-3.5 text-muted-foreground" />
                 Status <span className="text-red-500">*</span>
               </label>
-              <Select
+              <Input
+                {...register('status')}
+                placeholder="asd"
+                className={errors.status ? 'border-red-500' : ''}
+              />
+              {/* <Select
                 value={statusValue || ''}
                 onValueChange={(value) => setValue('status', value)}
               >
@@ -229,7 +234,7 @@ export default function EditLeadModal() {
                     </SelectItem>
                   ))}
                 </SelectContent>
-              </Select>
+              </Select> */}
               {errors.status && (
                 <p className="text-xs text-red-500">{errors.status.message}</p>
               )}

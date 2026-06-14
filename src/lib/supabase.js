@@ -173,7 +173,7 @@ export const clientService = {
         }
         throw error;
       }
-
+      console.log(data.status)
       return data;
     } catch (err) {
       console.error('updateClient caught error', { err, id, payload });

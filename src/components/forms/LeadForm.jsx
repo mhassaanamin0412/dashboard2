@@ -110,7 +110,7 @@ export default function LeadForm() {
         shopify_page: data.shopify_page?.trim() || null,
         portfolio_url: data.portfolio_url?.trim() || null,
         country: data.country?.trim() || null,
-        status: data.status,
+        status: data.status?.trim(),
         project_type: data.project_type?.trim() || null,
         project_description: data.project_description?.trim() || null,
         tags: data.tags?.trim() || null,

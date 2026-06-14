@@ -5,7 +5,6 @@ import { defineConfig } from "vite"
 export default defineConfig({
   base: './',
   plugins: [react()],
-  base: "/dashboard2",
   server: {
     port: 3000,
   },

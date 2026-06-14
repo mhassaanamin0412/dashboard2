@@ -2,6 +2,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import {
   LayoutDashboard,
   Users,
+  Form,
   Settings,
   ChevronLeft,
   ChevronRight,
@@ -12,6 +13,7 @@ import { cn } from '@/lib/utils';
 const navItems = [
   { label: 'Dashboard', icon: LayoutDashboard, path: '/' },
   { label: 'Leads', icon: Users, path: '/leads' },
+  { label: 'Form', icon: Form, path: '/form' },
   { label: 'Settings', icon: Settings, path: '/settings' },
 ];
 

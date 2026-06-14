@@ -4,11 +4,12 @@ import LeadsTable from '@/components/table/LeadsTable';
 import EditLeadModal from '@/components/modals/EditLeadModal';
 import DeleteConfirmModal from '@/components/modals/DeleteConfirmModal';
 import useClientStore from '@/store/useClientStore';
+import StatsCards from '@/components/dashboard/StatsCards';
 import { Button } from '@/components/ui/button';
 import { useNavigate } from 'react-router-dom';
 
 export default function Leads() {
-  const { fetchClients, setupRealtimeSubscription, cleanupSubscription } = useClientStore();
+  const { stats, fetchClients, setupRealtimeSubscription, cleanupSubscription } = useClientStore();
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -22,6 +23,7 @@ export default function Leads() {
 
   return (
     <div className="space-y-6">
+      <StatsCards stats={stats} loading={false} />
       {/* Header */}
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div>
@@ -33,7 +35,7 @@ export default function Leads() {
             View and manage all your client leads
           </p>
         </div>
-        <Button onClick={() => navigate('/')}>
+        <Button onClick={() => navigate('/form')}>
           <Users className="mr-2 h-4 w-4" />
           Create New Lead
         </Button>
